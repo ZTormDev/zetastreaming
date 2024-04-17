@@ -35,7 +35,7 @@ const tmdbApi = {
         return axiosClient.get(url, params);
     },
     detail: (cate, id, params) => {
-        const url = category[cate] + '/' + id + '?language=es-ES';
+        const url = category[cate] + '/' + id;
         return axiosClient.get(url, params);
     },
     credits: (cate, id) => {
