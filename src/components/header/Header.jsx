@@ -9,15 +9,15 @@ import logo from '../../assets/tmovie.png';
 const headerNav = [
     {
         display: 'Inicio',
-        path: 'https://ztormdev.github.io/zetamovies'
+        path: '/zetamovies'
     },
     {
         display: 'Peliculas',
-        path: 'https://ztormdev.github.io/zetamovies/movie'
+        path: '/zetamovies/movie'
     },
     {
         display: 'Series de TV',
-        path: 'https://ztormdev.github.io/zetamovies/tv'
+        path: '/zetamovies/tv'
     }
 ];
 
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="header__wrap container">
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <Link to="https://ztormdev.github.io/zetamovies">ZETA MOVIES</Link>
+                    <Link to="/zetamovies">ZETA MOVIES</Link>
                 </div>
                 <ul className="header__nav">
                     {
