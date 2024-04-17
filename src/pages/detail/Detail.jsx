@@ -9,25 +9,41 @@ import CastList from './CastList';
 
 import MovieList from '../../components/movie-list/MovieList';
 
-
-
 const Detail = () => {
 
     const { category, id } = useParams();
 
+    const { season, episode } = 1;
+
     const [item, setItem] = useState(null);
+    const [iframeSrc, setIframeSrc] = useState('');
+    const [TitleCategory, setTitleCategory] = useState('');
 
     useEffect(() => {
         const getDetail = async () => {
             const response = await tmdbApi.detail(category, id, {params:{}});
             setItem(response);
             window.scrollTo(0,0);
+
+            // Determinar la fuente del iframe
+            const src = category === 'movie'
+                ? `https://vidsrc.me/embed/movie?tmdb=${id}&ds_langs=es`
+                : category === 'tv'
+                ? `https://vidsrc.me/embed/tv?tmdb=${id}&season=${season}&episode=${episode}&ds_langs=es`
+                : ''; // Manejar otros casos si es necesario
+
+            // Determinar la fuente del iframe
+            const title = category === 'movie'
+                ? `Ver Pelicula Online`
+                : category === 'tv'
+                ? `Ver Serie Online`
+                : ''; // Manejar otros casos si es necesario
+
+            setIframeSrc(src);
+            setTitleCategory(title);
         }
         getDetail();
     }, [category, id]);
-
-
-    const iframeSrc = "https://vidsrc.me/embed/movie?tmdb=" + id + "&ds_langs=es";
 
     return (
         <>
@@ -60,10 +76,10 @@ const Detail = () => {
                             </div>
                         </div>
                         <div className="container">
+                            <h2 className='titleCategory'>{TitleCategory}</h2>
                             <div className="section mb-3 pelicula">
-                                <h2>Ver Pelicula Online</h2>
                                 <iframe className='movie-iframe'
-                                    src={iframeSrc} title='Movie'
+                                    src={iframeSrc} title={category}
                                     frameborder="0" 
                                     allowfullscreen="" 
                                     webkitallowfullscreen="" 
@@ -85,5 +101,3 @@ const Detail = () => {
 }
 
 export default Detail;
-
-

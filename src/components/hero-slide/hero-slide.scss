@@ -37,8 +37,8 @@
         position: relative;
 
         &__info {
-            width: 55%;
-            padding: 0 3rem;
+            width: 65%;
+            padding: 0 5rem 0 8vw;
             position: relative;
 
             @include tablet {
@@ -78,8 +78,9 @@
 
         &__poster {
             flex: 1;
-            @include flex(center, flex-start);
+            @include flex(center, start);
             position: relative;
+            padding-right: 5rem;
 
             img {
                 width: 400px;

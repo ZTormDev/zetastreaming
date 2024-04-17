@@ -15,7 +15,7 @@ const Home = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Peliculas en Tendencia</h2>
-                        <Link to="https://ztormdev.github.io/zetamovies/movie">
+                        <Link to="/zetamovies/movie">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -25,7 +25,7 @@ const Home = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Peliculas Mejores Valoradas</h2>
-                        <Link to="https://ztormdev.github.io/zetamovies/movie">
+                        <Link to="/zetamovies/movie">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -35,7 +35,7 @@ const Home = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Tendencia en TV</h2>
-                        <Link to="https://ztormdev.github.io/zetamovies/tv">
+                        <Link to="/zetamovies/tv">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -45,7 +45,7 @@ const Home = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Mejores Valoradas en TV</h2>
-                        <Link to="https://ztormdev.github.io/zetamovies/tv">
+                        <Link to="/zetamovies/tv">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
