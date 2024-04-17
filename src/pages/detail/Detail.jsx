@@ -6,9 +6,10 @@ import apiConfig from '../../api/apiConfig';
 
 import './detail.scss';
 import CastList from './CastList';
-import VideoList from './VideoList';
 
 import MovieList from '../../components/movie-list/MovieList';
+
+
 
 const Detail = () => {
 
@@ -24,6 +25,9 @@ const Detail = () => {
         }
         getDetail();
     }, [category, id]);
+
+
+    const iframeSrc = "https://vidsrc.me/embed/movie?tmdb=" + id + "&ds_langs=es";
 
     return (
         <>
@@ -49,15 +53,22 @@ const Detail = () => {
                                 <p className="overview">{item.overview}</p>
                                 <div className="cast">
                                     <div className="section__header">
-                                        <h2>Casts</h2>
+                                        <h2>Actores</h2>
                                     </div>
                                     <CastList id={item.id}/>
                                 </div>
                             </div>
                         </div>
                         <div className="container">
-                            <div className="section mb-3">
-                                <VideoList id={item.id}/>
+                            <div className="section mb-3 pelicula">
+                                <h2>Ver Pelicula Online</h2>
+                                <iframe className='movie-iframe'
+                                    src={iframeSrc} title='Movie'
+                                    frameborder="0" 
+                                    allowfullscreen="" 
+                                    webkitallowfullscreen="" 
+                                    mozallowfullscreen="">
+                                </iframe>
                             </div>
                             <div className="section mb-3">
                                 <div className="section__header mb-2">
@@ -74,3 +85,5 @@ const Detail = () => {
 }
 
 export default Detail;
+
+

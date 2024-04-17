@@ -19,7 +19,7 @@ export const tvType = {
 
 const tmdbApi = {
     getMoviesList: (type, params) => {
-        const url = 'movie/' + movieType[type];
+        const url = 'movie/' + movieType[type] + '?language=es-ES';
         return axiosClient.get(url, params);
     },
     getTvList: (type, params) => {
@@ -35,7 +35,7 @@ const tmdbApi = {
         return axiosClient.get(url, params);
     },
     detail: (cate, id, params) => {
-        const url = category[cate] + '/' + id;
+        const url = category[cate] + '/' + id + '?language=es-ES';
         return axiosClient.get(url, params);
     },
     credits: (cate, id) => {

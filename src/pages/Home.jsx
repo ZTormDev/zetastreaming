@@ -14,9 +14,9 @@ const Home = () => {
             <div className="container">
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Trending Movies</h2>
+                        <h2>Peliculas en Tendencia</h2>
                         <Link to="/movie">
-                            <OutlineButton className="small">View more</OutlineButton>
+                            <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
                     <MovieList category={category.movie} type={movieType.popular}/>
@@ -24,9 +24,9 @@ const Home = () => {
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Top Rated Movies</h2>
+                        <h2>Peliculas Mejores Valoradas</h2>
                         <Link to="/movie">
-                            <OutlineButton className="small">View more</OutlineButton>
+                            <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
                     <MovieList category={category.movie} type={movieType.top_rated}/>
@@ -34,9 +34,9 @@ const Home = () => {
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Trending TV</h2>
+                        <h2>Tendencia en TV</h2>
                         <Link to="/tv">
-                            <OutlineButton className="small">View more</OutlineButton>
+                            <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
                     <MovieList category={category.tv} type={tvType.popular}/>
@@ -44,9 +44,9 @@ const Home = () => {
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Top Rated TV</h2>
+                        <h2>Mejores Valoradas en TV</h2>
                         <Link to="/tv">
-                            <OutlineButton className="small">View more</OutlineButton>
+                            <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
                     <MovieList category={category.tv} type={tvType.top_rated}/>

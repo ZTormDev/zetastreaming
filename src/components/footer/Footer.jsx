@@ -14,26 +14,22 @@ const Footer = () => {
                 <div className="footer__content__logo">
                     <div className="logo">
                         <img src={logo} alt="" />
-                        <Link to="/">tMovies</Link>
+                        <Link to="/">ZETA MOVIES</Link>
                     </div>
                 </div>
                 <div className="footer__content__menus">
                     <div className="footer__content__menu">
-                        <Link to="/">Home</Link>
-                        <Link to="/">Contact us</Link>
-                        <Link to="/">Term of services</Link>
-                        <Link to="/">About us</Link>
+                        <Link to="/">Inicio</Link>
+                        <Link to="/">Peliculas</Link>
+                        <Link to="/">Series de TV</Link>
                     </div>
                     <div className="footer__content__menu">
-                        <Link to="/">Live</Link>
-                        <Link to="/">FAQ</Link>
-                        <Link to="/">Premium</Link>
-                        <Link to="/">Pravacy policy</Link>
+                        <Link to="/">Sigueme en Twitter</Link>
+                        <Link to="/">Sigueme en GitHub</Link>
                     </div>
                     <div className="footer__content__menu">
-                        <Link to="/">You must watch</Link>
-                        <Link to="/">Recent release</Link>
-                        <Link to="/">Top IMDB</Link>
+                        <Link to="/">Tienes que ver</Link>
+                        <Link to="/">Lanzamientos Recientes</Link>
                     </div>
                 </div>
             </div>
