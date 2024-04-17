@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/zetamovies/build/static/css/main.400494ad.chunk.css",
+    "main.js": "/zetamovies/build/static/js/main.d6052737.chunk.js",
+    "main.js.map": "/zetamovies/build/static/js/main.d6052737.chunk.js.map",
+    "runtime-main.js": "/zetamovies/build/static/js/runtime-main.17dff283.js",
+    "runtime-main.js.map": "/zetamovies/build/static/js/runtime-main.17dff283.js.map",
+    "static/css/2.2894c9e2.chunk.css": "/zetamovies/build/static/css/2.2894c9e2.chunk.css",
+    "static/js/2.eb93f6dd.chunk.js": "/zetamovies/build/static/js/2.eb93f6dd.chunk.js",
+    "static/js/2.eb93f6dd.chunk.js.map": "/zetamovies/build/static/js/2.eb93f6dd.chunk.js.map",
+    "index.html": "/zetamovies/build/index.html",
+    "static/css/2.2894c9e2.chunk.css.map": "/zetamovies/build/static/css/2.2894c9e2.chunk.css.map",
+    "static/css/main.400494ad.chunk.css.map": "/zetamovies/build/static/css/main.400494ad.chunk.css.map",
+    "static/js/2.eb93f6dd.chunk.js.LICENSE.txt": "/zetamovies/build/static/js/2.eb93f6dd.chunk.js.LICENSE.txt",
+    "static/media/boxicons.min.css": "/zetamovies/build/static/media/boxicons.cbd149c5.ttf",
+    "static/media/footer-bg.67e95f05.jpg": "/zetamovies/build/static/media/footer-bg.67e95f05.jpg",
+    "static/media/tmovie.d90e12e7.png": "/zetamovies/build/static/media/tmovie.d90e12e7.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17dff283.js",
+    "static/css/2.2894c9e2.chunk.css",
+    "static/js/2.eb93f6dd.chunk.js",
+    "static/css/main.400494ad.chunk.css",
+    "static/js/main.d6052737.chunk.js"
+  ]
+}
