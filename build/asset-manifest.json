@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/zetamovies/static/css/main.ec0fde1d.chunk.css",
-    "main.js": "/zetamovies/static/js/main.590b43d5.chunk.js",
-    "main.js.map": "/zetamovies/static/js/main.590b43d5.chunk.js.map",
+    "main.js": "/zetamovies/static/js/main.d1e46efa.chunk.js",
+    "main.js.map": "/zetamovies/static/js/main.d1e46efa.chunk.js.map",
     "runtime-main.js": "/zetamovies/static/js/runtime-main.2772ed27.js",
     "runtime-main.js.map": "/zetamovies/static/js/runtime-main.2772ed27.js.map",
     "static/css/2.29986bba.chunk.css": "/zetamovies/static/css/2.29986bba.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.29986bba.chunk.css",
     "static/js/2.92a50b87.chunk.js",
     "static/css/main.ec0fde1d.chunk.css",
-    "static/js/main.590b43d5.chunk.js"
+    "static/js/main.d1e46efa.chunk.js"
   ]
 }
