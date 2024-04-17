@@ -10,19 +10,19 @@ const Routes = () => {
     return (
         <Switch>
             <Route
-                path='/:category/search/:keyword'
+                path='https://ztormdev.github.io/zetamovies/:category/search/:keyword'
                 component={Catalog}
             />
             <Route
-                path='/:category/:id'
+                path='https://ztormdev.github.io/zetamovies/:category/:id'
                 component={Detail}
             />
             <Route
-                path='/:category'
+                path='https://ztormdev.github.io/zetamovies/:category'
                 component={Catalog}
             />
             <Route
-                path='/'
+                path='https://ztormdev.github.io/zetamovies'
                 exact
                 component={Home}
             />
