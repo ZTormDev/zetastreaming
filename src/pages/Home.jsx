@@ -15,7 +15,7 @@ const Home = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Peliculas en Tendencia</h2>
-                        <Link to="/zetamovies/movie">
+                        <Link to="/zetastreaming/movie">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -25,7 +25,7 @@ const Home = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Peliculas Mejores Valoradas</h2>
-                        <Link to="/zetamovies/movie">
+                        <Link to="/zetastreaming/movie">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -34,8 +34,8 @@ const Home = () => {
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Tendencia en TV</h2>
-                        <Link to="/zetamovies/tv">
+                        <h2>Series en Tendencia</h2>
+                        <Link to="/zetastreaming/tv">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -44,8 +44,8 @@ const Home = () => {
 
                 <div className="section mb-3">
                     <div className="section__header mb-2">
-                        <h2>Mejores Valoradas en TV</h2>
-                        <Link to="/zetamovies/tv">
+                        <h2>Series Mejores Valoradas</h2>
+                        <Link to="/zetastreaming/tv">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>

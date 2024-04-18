@@ -13,7 +13,7 @@ const MovieCard = props => {
 
     const item  = props.item;
 
-    const link = '/zetamovies/' + category[props.category] + '/' + item.id;
+    const link = '/zetastreaming/' + category[props.category] + '/' + item.id;
 
     const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
 

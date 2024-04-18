@@ -7,6 +7,13 @@ import { Link } from 'react-router-dom';
 import bg from '../../assets/footer-bg.jpg';
 import logo from '../../assets/tmovie.png';
 
+const twitter = () => {
+    window.open('https://twitter.com/itsztorm', '_blank');
+};
+const github = () => {
+    window.open('https://github.com/ZTormDev', '_blank');
+};
+
 const Footer = () => {
     return (
         <div className="footer" style={{backgroundImage: `url(${bg})`}}>
@@ -14,22 +21,22 @@ const Footer = () => {
                 <div className="footer__content__logo">
                     <div className="logo">
                         <img src={logo} alt="" />
-                        <Link to="/zetamovies">ZETA MOVIES</Link>
+                        <Link to="/zetastreaming">ZETA STREAMING</Link>
                     </div>
                 </div>
                 <div className="footer__content__menus">
                     <div className="footer__content__menu">
-                        <Link to="/zetamovies">Inicio</Link>
-                        <Link to="/zetamovies/movie">Peliculas</Link>
-                        <Link to="/zetamovies/tv">Series de TV</Link>
+                        <Link to="/zetastreaming">Inicio</Link>
+                        <Link to="/zetastreaming/movie">Peliculas</Link>
+                        <Link to="/zetastreaming/tv">Series</Link>
                     </div>
                     <div className="footer__content__menu">
-                        <Link to="/zetamovies">Sigueme en Twitter</Link>
-                        <Link to="/zetamovies">Sigueme en GitHub</Link>
+                        <Link to="/zetastreaming" onClick={twitter}>Sigueme en Twitter</Link>
+                        <Link to="/zetastreaming" onClick={github}>Sigueme en GitHub</Link>
                     </div>
                     <div className="footer__content__menu">
-                        <Link to="/zetamovies">Tienes que ver</Link>
-                        <Link to="/zetamovies">Lanzamientos Recientes</Link>
+                        <Link to="/zetastreaming">Tienes que ver</Link>
+                        <Link to="/zetastreaming">Lanzamientos Recientes</Link>
                     </div>
                 </div>
             </div>

@@ -13,13 +13,13 @@ button {
     padding: 0.5rem .7rem;
     font-size: 1.5rem;
     font-weight: 600;
-    box-shadow: 0px 0px 7px 8px #45187946;
+    box-shadow: 0px 0px 7px 8px #745abb3d;
     transition: box-shadow 0.3s ease;
     position: relative;
 }
 
 .btn:hover {
-    box-shadow: 0px 0px 7px 15px #5f20a746;
+    box-shadow: 0px 0px 15px 10px #9473ee77;
 }
 
 .btn-outline {
@@ -38,6 +38,8 @@ button {
 
 .btn.small {
     border-width: 2px;
-    padding: 0.25rem 1.5rem;
+    margin-top: 1px;
+    margin-right: 3px;
+    padding: 0.5rem 2rem;
     font-size: 1rem;
 }

@@ -17,7 +17,7 @@ html {
     }
 
     @include mobile {
-        font-size: 60%;
+        font-size: 70%;
     }
 }
 
@@ -81,4 +81,24 @@ iframe {
 
 .section__header {
     @include flex(center, space-between);
+}
+
+
+.page-header h2 {
+    font-size: 425%;
+}
+
+
+.movie-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.section.mb-3 .section.mb-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }

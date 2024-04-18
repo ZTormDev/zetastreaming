@@ -96,7 +96,7 @@ const MovieSearch = props => {
     const goToSearch = useCallback(
         () => {
             if (keyword.trim().length > 0) {
-                history.push(`/zetamovies/${category[props.category]}/search/${keyword}`);
+                history.push(`/zetastreaming/${category[props.category]}/buscar/${keyword}`);
             }
         },
         [keyword, props.category, history]
