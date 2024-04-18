@@ -9,10 +9,10 @@ const IntroLoader = () => {
             {
                 <div className='introLoaderBackground'>
                     <div className="introLoader">
+                        <div className='blackBG'></div>
                         <div className='backgroundImg'>
                             <img src={logo} alt="" />
                         </div>
-                        <div className='blackBG'></div>
                         <h2>ZETA STREAMING</h2>
                     </div>
                 </div>
