@@ -9,11 +9,16 @@ import Footer from './components/footer/Footer';
 
 import Routes from './config/Routes';
 
+import IntroLoader from './components/introLoader/introLoader.jsx'
+
 function App() {
+
+    
     return (
         <BrowserRouter>
             <Route render={props => (
                 <>
+                    <IntroLoader></IntroLoader>
                     <Header {...props}/>
                     <Routes/>
                     <Footer/>
