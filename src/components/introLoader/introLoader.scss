@@ -76,7 +76,12 @@
 @keyframes enterLogo {
 	0% {
 		transform: scale(200) translateX(0);
+        opacity: 0;
 	}
+
+    30% {
+        opacity: 1;
+    }
 
     40% {
 		transform: scale(0.9);
