@@ -81,6 +81,11 @@ const HeroSlideItem = props => {
         modal.classList.toggle('active');
     }
 
+    
+    const originalTitle = `${item.title}`;
+
+    const urlTitle = originalTitle.replace(/ /g, '-')
+
     return (
         <div
             className={`hero-slide__item ${props.className}`}
@@ -91,7 +96,7 @@ const HeroSlideItem = props => {
                     <h2 className="title">{item.title}</h2>
                     <div className="overview">{item.overview}</div>
                     <div className="btns">
-                        <Button onClick={() => hisrory.push('/zetastreaming/movie/' + item.id)}>
+                        <Button onClick={() => hisrory.push(`/zetastreaming/movie/${item.id}/${urlTitle.toLowerCase()}`)}>
                             Ver Ahora
                         </Button>
                         <OutlineButton onClick={setModalActive}>
