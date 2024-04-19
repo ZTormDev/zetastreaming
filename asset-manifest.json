@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/zetastreaming/static/css/main.c2eeb0f0.chunk.css",
-    "main.js": "/zetastreaming/static/js/main.8f3f37d9.chunk.js",
-    "main.js.map": "/zetastreaming/static/js/main.8f3f37d9.chunk.js.map",
-    "runtime-main.js": "/zetastreaming/static/js/runtime-main.e8d0e8ed.js",
-    "runtime-main.js.map": "/zetastreaming/static/js/runtime-main.e8d0e8ed.js.map",
+    "main.css": "/zetastreaming/static/css/main.da80a9c6.chunk.css",
+    "main.js": "/zetastreaming/static/js/main.cceef242.chunk.js",
+    "main.js.map": "/zetastreaming/static/js/main.cceef242.chunk.js.map",
+    "runtime-main.js": "/zetastreaming/static/js/runtime-main.8fcaee77.js",
+    "runtime-main.js.map": "/zetastreaming/static/js/runtime-main.8fcaee77.js.map",
     "static/css/2.29986bba.chunk.css": "/zetastreaming/static/css/2.29986bba.chunk.css",
-    "static/js/2.468995b6.chunk.js": "/zetastreaming/static/js/2.468995b6.chunk.js",
-    "static/js/2.468995b6.chunk.js.map": "/zetastreaming/static/js/2.468995b6.chunk.js.map",
+    "static/js/2.fc88ce12.chunk.js": "/zetastreaming/static/js/2.fc88ce12.chunk.js",
+    "static/js/2.fc88ce12.chunk.js.map": "/zetastreaming/static/js/2.fc88ce12.chunk.js.map",
     "index.html": "/zetastreaming/index.html",
     "static/css/2.29986bba.chunk.css.map": "/zetastreaming/static/css/2.29986bba.chunk.css.map",
-    "static/css/main.c2eeb0f0.chunk.css.map": "/zetastreaming/static/css/main.c2eeb0f0.chunk.css.map",
-    "static/js/2.468995b6.chunk.js.LICENSE.txt": "/zetastreaming/static/js/2.468995b6.chunk.js.LICENSE.txt",
+    "static/css/main.da80a9c6.chunk.css.map": "/zetastreaming/static/css/main.da80a9c6.chunk.css.map",
+    "static/js/2.fc88ce12.chunk.js.LICENSE.txt": "/zetastreaming/static/js/2.fc88ce12.chunk.js.LICENSE.txt",
     "static/media/boxicons.min.css": "/zetastreaming/static/media/boxicons.cbd149c5.ttf",
     "static/media/footer-bg.67e95f05.jpg": "/zetastreaming/static/media/footer-bg.67e95f05.jpg",
     "static/media/tmovie.d90e12e7.png": "/zetastreaming/static/media/tmovie.d90e12e7.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.e8d0e8ed.js",
+    "static/js/runtime-main.8fcaee77.js",
     "static/css/2.29986bba.chunk.css",
-    "static/js/2.468995b6.chunk.js",
-    "static/css/main.c2eeb0f0.chunk.css",
-    "static/js/main.8f3f37d9.chunk.js"
+    "static/js/2.fc88ce12.chunk.js",
+    "static/css/main.da80a9c6.chunk.css",
+    "static/js/main.cceef242.chunk.js"
   ]
 }
