@@ -67,6 +67,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
     z-index: 998;
     animation: outBg 2s linear 6s normal forwards;
 }
@@ -143,6 +144,7 @@
 @keyframes outBg {
     0% {
         opacity: 1;
+        display: flex;
     }
 
     100% {
