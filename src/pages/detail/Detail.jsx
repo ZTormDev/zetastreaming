@@ -10,10 +10,11 @@ import CastList from './CastList';
 import MovieList from '../../components/movie-list/MovieList';
 
 const Detail = () => {
+    
 
     const { category, id } = useParams();
 
-    const { season, episode } = 1;
+    const { season, episode } = '1';
 
     const [item, setItem] = useState(null);
     const [iframeSrc, setIframeSrc] = useState('');
@@ -27,9 +28,9 @@ const Detail = () => {
 
             // Determinar la fuente del iframe
             const src = category === 'movie'
-                ? `https://vidsrc.me/embed/movie?tmdb=${id}&ds_langs=es`
+                ? `https://es.oceanplay.me/embeds/${id}`
                 : category === 'tv'
-                ? `https://vidsrc.me/embed/tv?tmdb=${id}&season=${season}&episode=${episode}&ds_langs=es`
+                ? `https://es.oceanplay.me/embeds/${id}/1/1`
                 : ''; // Manejar otros casos si es necesario
 
             // Determinar la fuente del iframe
@@ -44,6 +45,8 @@ const Detail = () => {
         }
         getDetail();
     }, [category, id]);
+
+
 
     return (
         <>

@@ -57,7 +57,7 @@
     opacity: 0;
     display: flex;
     animation: enterText 4s ease 0s 1 normal forwards,
-                outText .1s ease 5.8s normal forwards;
+                outText 0.3s ease 5.65s normal forwards;
 }
 
 .introLoaderBackground {
@@ -161,6 +161,7 @@
 @media only screen and (max-width: 1300px) { 
     .introLoader .backgroundImg img {
         padding-left: 20vw;
+        left: -35%;
     }
 
     .backgroundImg {

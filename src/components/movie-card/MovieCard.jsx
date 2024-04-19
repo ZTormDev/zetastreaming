@@ -13,7 +13,15 @@ const MovieCard = props => {
 
     const item  = props.item;
 
-    const link = '/zetastreaming/' + category[props.category] + '/' + item.id;
+    const originalTitle = `${item.title}`;
+
+    const urlTitle = originalTitle.replace(/ /g, '-')
+
+    const link = `/zetastreaming/${category[props.category]}/${item.id}/${urlTitle.toLocaleLowerCase()}`;
+
+
+
+
 
     const bg = apiConfig.w500Image(item.poster_path || item.backdrop_path);
 
