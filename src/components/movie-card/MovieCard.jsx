@@ -13,7 +13,7 @@ const MovieCard = props => {
 
     const item  = props.item;
 
-    const originalTitle = `${item.title}`;
+    const originalTitle = `${item.title || item.name}`;
 
     const urlTitle = originalTitle.replace(/ /g, '-')
 

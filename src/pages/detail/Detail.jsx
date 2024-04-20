@@ -14,11 +14,10 @@ const Detail = () => {
 
     const { category, id } = useParams();
 
-    const { season, episode } = '1';
-
     const [item, setItem] = useState(null);
     const [iframeSrc, setIframeSrc] = useState('');
     const [TitleCategory, setTitleCategory] = useState('');
+    const [typeOfContent, setTypeOfContent] = useState('');
 
     useEffect(() => {
         const getDetail = async () => {
@@ -31,17 +30,23 @@ const Detail = () => {
                 ? `https://es.oceanplay.me/embeds/${id}`
                 : category === 'tv'
                 ? `https://es.oceanplay.me/embeds/${id}/1/1`
-                : ''; // Manejar otros casos si es necesario
+                : '';
 
-            // Determinar la fuente del iframe
             const title = category === 'movie'
                 ? `Ver Pelicula Online`
                 : category === 'tv'
                 ? `Ver Serie Online`
-                : ''; // Manejar otros casos si es necesario
+                : '';
+
+            const typeOfContent = category === 'movie'
+                ? `Pelicula`
+                : category === 'tv'
+                ? `Serie`
+                : ''; 
 
             setIframeSrc(src);
             setTitleCategory(title);
+            setTypeOfContent(typeOfContent);
         }
         getDetail();
     }, [category, id]);
@@ -68,6 +73,23 @@ const Detail = () => {
                                             <span key={i} className="genres__item">{genre.name}</span>
                                         ))
                                     }
+                                </div>
+
+                                <div className='type-content'>
+                                    <h2>{typeOfContent}</h2>
+                                    
+                                    {category === 'movie'
+                                    ? <div className='movie-details'>
+                                            <p><strong>Duracion: {item.runtime} min</strong></p> <h3>Fecha de estreno: {item.release_date}</h3>
+                                        </div>
+                                    : category === 'tv'
+                                    ? <div className='tv-seasons-episodes'>
+                                            <p><strong>Temporadas: {item.number_of_seasons}</strong></p>
+                                            <p><strong>Episodios: {item.number_of_episodes}</strong></p>
+                                            <h3>Fecha de estreno: {item.first_air_date}</h3>
+                                        </div>
+                                    : ''}
+                                    
                                 </div>
                                 <p className="overview">{item.overview}</p>
                                 <div className="cast">

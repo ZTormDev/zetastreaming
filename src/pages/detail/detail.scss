@@ -79,7 +79,7 @@
 
             &__item {
                 padding: 0.5rem 1.5rem;
-                border: 2px solid $white;
+                border: 2px solid $main-color;
                 border-radius: $border-radius;
                 font-size: 0.8rem;
                 font-weight: 600;
@@ -92,17 +92,19 @@
 .casts {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
-    gap: 10px;
+    gap: 20px;
 
     &__item {
         &__img {
-            padding-top: 160px;
+            padding: 4rem 0;
             background-size: cover;
             margin-bottom: 0.5rem;
+            border-radius: .5rem;
         }
 
         &__name {
             font-size: 0.8rem;
+            font-weight: 600;
         }
     }
 }
@@ -139,4 +141,35 @@
 .titleCategory {
     text-align: center;
     margin-top: 5rem;
+}
+
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.type-content {
+    margin-left: 0rem;
+}
+
+.type-content h2{
+    color: white;
+    font-size: 1.8rem;
+}
+
+.tv-seasons-episodes, .movie-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.tv-seasons-episodes p, .movie-details p {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: $main-color;
+}
+
+.type-content h3, .movie-details h3 {
+    margin-left: 2rem;
+    font-weight: 600;
+    color: rgb(201, 172, 255);
 }

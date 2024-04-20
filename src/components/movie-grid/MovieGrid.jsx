@@ -96,7 +96,11 @@ const MovieSearch = props => {
     const goToSearch = useCallback(
         () => {
             if (keyword.trim().length > 0) {
-                history.push(`/zetastreaming/${category[props.category]}/search/${keyword}`);
+                const originalKeyword = `${keyword}`;
+
+                const urlKeyword = originalKeyword.replace(/ /g, '-');
+
+                history.push(`/zetastreaming/${category[props.category]}/search/${urlKeyword}`);
             }
         },
         [keyword, props.category, history]
