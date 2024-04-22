@@ -1,0 +1,55 @@
+@use "../../scss/" as *;
+
+.season-name {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: start;
+    user-select: none;
+}
+
+.season-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 4rem 2rem;
+    border-bottom: solid 1px $main-color;
+    cursor: pointer;
+    user-select: none;
+    background-repeat: no-repeat;
+    background-size:20%;
+    background-position: 0 50%;
+    transition: all 0.2s ease;
+    text-align: center;
+    justify-content: end;
+}
+
+.season-card:hover {
+    
+}
+
+.season-card:hover .play-icon {
+    transform: scale(1.5) translateX(-1rem);
+    background-color: white;
+}
+
+
+.details-container {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr .15fr;
+    align-items: center;
+    justify-content: start;
+    user-select: none;
+    text-align: start;
+    margin-right: 3rem;
+}
+
+.play-icon {
+    width: 2.5rem;
+    transition: all 0.2s ease;
+    background-color: $main-color;
+    border-radius: 50%;
+    user-select: none;
+    position: static;
+}
+

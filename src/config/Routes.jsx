@@ -26,6 +26,7 @@ const Routes = () => {
                 exact
                 component={Home}
             />
+            
         </Switch>
     );
 }

@@ -8,13 +8,23 @@ import './detail.scss';
 import CastList from './CastList';
 
 import MovieList from '../../components/movie-list/MovieList';
+import SeasonList from '../../components/season-list/season-list';
+
+import nextIcon from '../../assets/navigation-last-last-page-lastpage-right-next-icon-svgrepo-com.svg';
+import previusIcon from '../../assets/navigation-before-first-page-firstpage-left-previous-icon-svgrepo-com.svg';
+import listIcon from '../../assets/list-ul-alt-svgrepo-com (1).svg';
+import backIcon from '../../assets/back-svgrepo-com.svg';
+
+import playIcon from '../../assets/play-circle-svgrepo-com (1).svg';
+
 
 const Detail = () => {
-    
-
     const { category, id } = useParams();
 
     const [item, setItem] = useState(null);
+    const [episode, setEpisode] = useState(null);
+    const [season, setSeason] = useState(null);
+
     const [iframeSrc, setIframeSrc] = useState('');
     const [TitleCategory, setTitleCategory] = useState('');
     const [typeOfContent, setTypeOfContent] = useState('');
@@ -28,8 +38,6 @@ const Detail = () => {
             // Determinar la fuente del iframe
             const src = category === 'movie'
                 ? `https://es.oceanplay.me/embeds/${id}`
-                : category === 'tv'
-                ? `https://es.oceanplay.me/embeds/${id}/1/1`
                 : '';
 
             const title = category === 'movie'
@@ -50,6 +58,90 @@ const Detail = () => {
         }
         getDetail();
     }, [category, id]);
+
+        
+
+
+
+    const [showSeasons, setShowSeasons] = useState(true);
+
+    const [showEpisodes, setshowEpisodes] = useState(false);
+
+
+    const showSeasonsFunction = () => {
+        if (showSeasons === true) {
+            // SE MUESTRA EL SERIES PLAYER
+
+            setShowSeasons(false)
+            setshowEpisodes(true)
+
+
+        } else {
+            // SE OCULTA EL SERIES PLAYER
+
+            setShowSeasons(true)
+            setshowEpisodes(false)
+
+            setEpisodeNumber(1);
+            window.scrollTo(0,800);
+        }
+    }
+
+
+    const [seasonNumber, setSeasonNumber] = useState(1);
+    const [episodeNumber, setEpisodeNumber] = useState(1);
+
+    let episodeUrl = `https://es.oceanplay.me/embeds/${id}/${seasonNumber}/${episodeNumber}`;
+
+    const nextEpisode = () => {
+        setEpisodeNumber(episodeNumber + 1);
+    }
+
+    const previusEpisode = () => {
+        setEpisodeNumber(episodeNumber - 1);
+    }
+
+    const changeEpisode = () => {
+        setEpisodeNumber(episode.episode_number);
+    }
+
+    useEffect(() => {
+        const getEpisodeDetail = async () => {
+            const response = await tmdbApi.getEpisodeDetails(category, id, seasonNumber, episodeNumber, {params:{}});
+            setEpisode(response);
+            }
+        getEpisodeDetail();
+        }, [category, id, seasonNumber, episodeNumber]);
+
+
+    const seasonNumberFunction = (seasonSelected) => {
+        setSeasonNumber(seasonSelected);
+    }
+
+    useEffect(() => {
+        const getSeasonDetails = async () => {
+            const response = await tmdbApi.getSeasonDetails(category, id, seasonNumber, {params:{}});
+            setSeason(response);
+            window.scrollTo(0,0);
+            }
+            getSeasonDetails();
+        }, [category, id, seasonNumber]);
+
+        let isHidden = false;
+
+    const changeIsHidden = () => {
+
+        const listaEpisodios = document.getElementById('lista-episodios');
+
+        if(isHidden)
+        {
+            isHidden = false
+            listaEpisodios.classList.add('hidden')
+        } else {
+            isHidden = true;
+            listaEpisodios.classList.remove('hidden')
+        }
+    }
 
 
 
@@ -101,16 +193,98 @@ const Detail = () => {
                             </div>
                         </div>
                         <div className="container">
-                            <h2 className='titleCategory'>{TitleCategory}</h2>
-                            <div className="section mb-3 pelicula">
-                                <iframe className='movie-iframe'
-                                    src={iframeSrc} title={category}
-                                    frameborder="0" 
-                                    allowfullscreen="" 
-                                    webkitallowfullscreen="" 
-                                    mozallowfullscreen="">
-                                </iframe>
-                            </div>
+
+                            {category === 'movie'
+                                ? 
+                                <div className='movie-serie-player'>
+                                <h2 className='titleCategory'>{TitleCategory}</h2>
+                                <div className="section mb-3 pelicula">
+                                    <iframe className='movie-iframe'
+                                        src={iframeSrc} title={category}
+                                        frameborder="0" 
+                                        allowfullscreen="" 
+                                        webkitallowfullscreen="" 
+                                        mozallowfullscreen="">
+                                    </iframe>
+                                </div>
+                                </div>
+
+                                : category === 'tv'
+                                ?
+
+
+                                
+                                <div>
+                                {showSeasons && 
+                                    (
+                                        <div className='episodes-container'>
+                                            <h2 className='episodes-title'>Temporadas</h2>
+                                            <div className='season-list'>
+                                                <SeasonList seasonNumberFunction={seasonNumberFunction} showSeasonsFunction={showSeasonsFunction}></SeasonList>
+                                            </div>
+                                        </div>
+                                        
+                                    )
+                                }
+
+                                {showEpisodes &&
+                                    (
+                                        <div className='player-episode-container'>
+                                            
+                                            <div className='episode-info'>
+                                                <p>Episodio {episode.episode_number}: "{episode.name}"</p>
+                                                <p>Temporada {season.season_number}</p>
+                                            </div>
+                                            <iframe className='serie-iframe'
+                                                src={episodeUrl} title={category}
+                                                frameborder="0" 
+                                                allowfullscreen="" 
+                                                webkitallowfullscreen="" 
+                                                mozallowfullscreen="">
+                                            </iframe>
+                                            <div className='series-control-container'>
+                                                <div className='control-up'>
+                                                    
+                                                    <button onClick={previusEpisode}><img src={previusIcon} alt=""/><p className='previus-button'>Episodio Anterior</p></button>
+                                                    <div className='control-episode-list'>
+                                                        <div className='episode-button'>
+                                                            <button onClick={changeIsHidden}><p className='episode-list-button'>Lista de Episodios</p><img src={listIcon} alt="" /></button>
+
+
+                                                            <div id='lista-episodios' className='episodes-list hidden scroll'>
+                                                                {season.episodes.map(episode => (
+                                                                    <div key={episode.id} onClick={changeEpisode} className='episode-card' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${apiConfig.originalImage(episode.still_path)})`}}>
+                                                                            <div className='episode-details'>
+                                                                                <h2 className='season-name'>Episodio {episode.episode_number}:</h2>
+                                                                                <h2 className='season-name'>{episode.name}</h2>
+                                                                            </div>
+                                                                            <img className='play-icon' src={playIcon} alt="" />
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                    <button onClick={showSeasonsFunction} className='volver-button'><img src={backIcon} alt="" /> Elejir otra temporada</button>
+
+                                                    <button onClick={nextEpisode}><p className='next-button'>Proximo Episodio </p><img src={nextIcon} alt=""/></button>
+
+                                                </div>
+                                                <div className='control-bottom'>
+                                                
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )
+                                }
+                                </div>
+
+                                : ''}
+
+
+
+
                             <div className="section mb-3">
                                 <div className="section__header mb-2">
                                     <h2>Similar</h2>

@@ -38,6 +38,14 @@ const tmdbApi = {
         const url = category[cate] + '/' + id + '?language=es-ES';
         return axiosClient.get(url, params);
     },
+    getEpisodeDetails: (cate, id, seasonNumber, episodeNumber, params, ) => {
+        const url = category[cate] + '/' + id + '/season/' + seasonNumber + '/episode/' + episodeNumber + '?language=es-ES';
+        return axiosClient.get(url, params);
+    },
+    getSeasonDetails: (cate, id, seasonNumber, params, ) => {
+        const url = category[cate] + '/' + id + '/season/' + seasonNumber + '?language=es-ES';
+        return axiosClient.get(url, params);
+    },
     credits: (cate, id) => {
         const url = category[cate] + '/' + id + '/credits';
         return axiosClient.get(url, {params: {}});
