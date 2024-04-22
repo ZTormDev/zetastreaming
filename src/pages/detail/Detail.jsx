@@ -235,13 +235,15 @@ const Detail = () => {
                                                 <p>Episodio {episode.episode_number}: "{episode.name}"</p>
                                                 <p>Temporada {season.season_number}</p>
                                             </div>
-                                            <iframe className='serie-iframe'
-                                                src={episodeUrl} title={category}
-                                                frameborder="0" 
-                                                allowfullscreen="" 
-                                                webkitallowfullscreen="" 
-                                                mozallowfullscreen="">
-                                            </iframe>
+                                            <div className='pelicula'>
+                                                <iframe className='movie-iframe'
+                                                    src={episodeUrl} title={category}
+                                                    frameborder="0" 
+                                                    allowfullscreen="" 
+                                                    webkitallowfullscreen="" 
+                                                    mozallowfullscreen="">
+                                                </iframe>
+                                            </div>
                                             <div className='series-control-container'>
                                                 <div className='control-up'>
                                                     
