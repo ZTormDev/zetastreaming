@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/zetastreaming/static/css/main.0737a85d.chunk.css",
-    "main.js": "/zetastreaming/static/js/main.1cb2dae8.chunk.js",
-    "main.js.map": "/zetastreaming/static/js/main.1cb2dae8.chunk.js.map",
+    "main.css": "/zetastreaming/static/css/main.d305f8af.chunk.css",
+    "main.js": "/zetastreaming/static/js/main.c11f10c3.chunk.js",
+    "main.js.map": "/zetastreaming/static/js/main.c11f10c3.chunk.js.map",
     "runtime-main.js": "/zetastreaming/static/js/runtime-main.8fcaee77.js",
     "runtime-main.js.map": "/zetastreaming/static/js/runtime-main.8fcaee77.js.map",
     "static/css/2.29986bba.chunk.css": "/zetastreaming/static/css/2.29986bba.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.38e45459.chunk.js.map": "/zetastreaming/static/js/2.38e45459.chunk.js.map",
     "index.html": "/zetastreaming/index.html",
     "static/css/2.29986bba.chunk.css.map": "/zetastreaming/static/css/2.29986bba.chunk.css.map",
-    "static/css/main.0737a85d.chunk.css.map": "/zetastreaming/static/css/main.0737a85d.chunk.css.map",
+    "static/css/main.d305f8af.chunk.css.map": "/zetastreaming/static/css/main.d305f8af.chunk.css.map",
     "static/js/2.38e45459.chunk.js.LICENSE.txt": "/zetastreaming/static/js/2.38e45459.chunk.js.LICENSE.txt",
     "static/media/back-svgrepo-com.1ff8aa9c.svg": "/zetastreaming/static/media/back-svgrepo-com.1ff8aa9c.svg",
     "static/media/boxicons.min.css": "/zetastreaming/static/media/boxicons.cbd149c5.ttf",
@@ -25,7 +25,7 @@
     "static/js/runtime-main.8fcaee77.js",
     "static/css/2.29986bba.chunk.css",
     "static/js/2.38e45459.chunk.js",
-    "static/css/main.0737a85d.chunk.css",
-    "static/js/main.1cb2dae8.chunk.js"
+    "static/css/main.d305f8af.chunk.css",
+    "static/js/main.c11f10c3.chunk.js"
   ]
 }
