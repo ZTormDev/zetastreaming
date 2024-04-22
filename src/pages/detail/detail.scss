@@ -332,16 +332,17 @@ button .episode-list-button {
     margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 30rem;
+    width: 30rem;
     position: absolute;
     z-index: 10;
     border-radius: 1rem;
     background-size: 100%;
     background-position: 50%;
-    height: 35rem;
+    max-height: 35rem;
     background-color: #1f1f1f;
     border: solid 2px $main-color;
 }
+
 
 .episode-card h2{
     font-size: 1rem;

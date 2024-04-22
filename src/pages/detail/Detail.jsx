@@ -29,6 +29,28 @@ const Detail = () => {
     const [TitleCategory, setTitleCategory] = useState('');
     const [typeOfContent, setTypeOfContent] = useState('');
 
+
+    
+// Define una función para eliminar un iframe dentro del body
+const removeIframeFromBody = () => {
+    const iframeToRemove = document.querySelector('body > iframe');
+    if (iframeToRemove) {
+      iframeToRemove.parentNode.removeChild(iframeToRemove);
+    }
+  };
+  
+  // Agrega un listener para el evento load del documento
+  document.addEventListener('DOMContentLoaded', () => {
+    // Agrega un listener para el evento load de los iframes
+    document.addEventListener('load', (event) => {
+      // Verifica si el elemento cargado es un iframe
+      if (event.target.tagName.toLowerCase() === 'iframe') {
+        // Ejecuta la función para eliminar el iframe del body
+        removeIframeFromBody();
+      }
+    }, true); // Usa el tercer parámetro true para capturar el evento durante la fase de captura
+  });
+
     useEffect(() => {
         const getDetail = async () => {
             const response = await tmdbApi.detail(category, id, {params:{}});
@@ -74,15 +96,15 @@ const Detail = () => {
 
             setShowSeasons(false)
             setshowEpisodes(true)
-
+            window.scrollTo(0,800);
 
         } else {
             // SE OCULTA EL SERIES PLAYER
 
             setShowSeasons(true)
             setshowEpisodes(false)
-
             setEpisodeNumber(1);
+
             window.scrollTo(0,800);
         }
     }
@@ -101,8 +123,14 @@ const Detail = () => {
         setEpisodeNumber(episodeNumber - 1);
     }
 
-    const changeEpisode = () => {
-        setEpisodeNumber(episode.episode_number);
+    let isHidden = false;
+    const listaEpisodios = document.getElementById('lista-episodios');
+
+    const changeEpisode = (episodeNumber) => {
+        setEpisodeNumber(episodeNumber);
+        console.log(episodeNumber, "se seteo el episodio");
+        isHidden = true;
+        listaEpisodios.classList.add('hidden')
     }
 
     useEffect(() => {
@@ -113,7 +141,6 @@ const Detail = () => {
         getEpisodeDetail();
         }, [category, id, seasonNumber, episodeNumber]);
 
-
     const seasonNumberFunction = (seasonSelected) => {
         setSeasonNumber(seasonSelected);
     }
@@ -122,17 +149,13 @@ const Detail = () => {
         const getSeasonDetails = async () => {
             const response = await tmdbApi.getSeasonDetails(category, id, seasonNumber, {params:{}});
             setSeason(response);
-            window.scrollTo(0,0);
             }
             getSeasonDetails();
         }, [category, id, seasonNumber]);
 
-        let isHidden = false;
+    
 
     const changeIsHidden = () => {
-
-        const listaEpisodios = document.getElementById('lista-episodios');
-
         if(isHidden)
         {
             isHidden = false
@@ -255,7 +278,7 @@ const Detail = () => {
 
                                                             <div id='lista-episodios' className='episodes-list hidden scroll'>
                                                                 {season.episodes.map(episode => (
-                                                                    <div key={episode.id} onClick={changeEpisode} className='episode-card' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${apiConfig.originalImage(episode.still_path)})`}}>
+                                                                    <div key={episode.id} onClick={() => changeEpisode(episode.episode_number)} className='episode-card' style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${apiConfig.originalImage(episode.still_path)})`}}>
                                                                             <div className='episode-details'>
                                                                                 <h2 className='season-name'>Episodio {episode.episode_number}:</h2>
                                                                                 <h2 className='season-name'>{episode.name}</h2>
