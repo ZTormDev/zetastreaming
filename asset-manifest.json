@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/zetastreaming/static/css/main.73ee1f22.chunk.css",
-    "main.js": "/zetastreaming/static/js/main.fe27f3ca.chunk.js",
-    "main.js.map": "/zetastreaming/static/js/main.fe27f3ca.chunk.js.map",
+    "main.js": "/zetastreaming/static/js/main.a4a07295.chunk.js",
+    "main.js.map": "/zetastreaming/static/js/main.a4a07295.chunk.js.map",
     "runtime-main.js": "/zetastreaming/static/js/runtime-main.8fcaee77.js",
     "runtime-main.js.map": "/zetastreaming/static/js/runtime-main.8fcaee77.js.map",
     "static/css/2.29986bba.chunk.css": "/zetastreaming/static/css/2.29986bba.chunk.css",
@@ -26,6 +26,6 @@
     "static/css/2.29986bba.chunk.css",
     "static/js/2.38e45459.chunk.js",
     "static/css/main.73ee1f22.chunk.css",
-    "static/js/main.fe27f3ca.chunk.js"
+    "static/js/main.a4a07295.chunk.js"
   ]
 }
