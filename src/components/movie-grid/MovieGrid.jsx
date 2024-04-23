@@ -100,7 +100,7 @@ const MovieSearch = props => {
 
                 const urlKeyword = originalKeyword.replace(/ /g, '-');
 
-                history.push(`/zetastreaming/${category[props.category]}/search/${urlKeyword}`);
+                history.push(`/${category[props.category]}/search/${urlKeyword}`);
             }
         },
         [keyword, props.category, history]

@@ -32,7 +32,15 @@ const SeasonList = ({ showSeasonsFunction , seasonNumberFunction}) => {
                 <div className='details-container'>
                     
                     <div className='text-container'>
+                        {season.season_number === 0
+                        ? 
                         <h2 className='season-name'>{season.name}</h2>
+                        : season.season_number !== 0
+                        ? 
+                        <h2 className='season-name'>Temporada {season.season_number}</h2>
+                        : ''
+                        }
+                        
                         <p>Episodios: {season.episode_count}</p>
                     </div>
                     <img className='play-icon' src={playIcon} alt="" />

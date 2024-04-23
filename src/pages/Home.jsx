@@ -37,7 +37,7 @@ const removeIframeFromBody = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Peliculas en Tendencia</h2>
-                        <Link to="/zetastreaming/movie">
+                        <Link to="/movie">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -47,7 +47,7 @@ const removeIframeFromBody = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Peliculas Mejores Valoradas</h2>
-                        <Link to="/zetastreaming/movie">
+                        <Link to="/movie">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -57,7 +57,7 @@ const removeIframeFromBody = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Series en Tendencia</h2>
-                        <Link to="/zetastreaming/tv">
+                        <Link to="/tv">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>
@@ -67,7 +67,7 @@ const removeIframeFromBody = () => {
                 <div className="section mb-3">
                     <div className="section__header mb-2">
                         <h2>Series Mejores Valoradas</h2>
-                        <Link to="/zetastreaming/tv">
+                        <Link to="/tv">
                             <OutlineButton className="small">Ver mas</OutlineButton>
                         </Link>
                     </div>

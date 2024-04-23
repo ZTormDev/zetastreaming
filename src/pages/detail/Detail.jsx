@@ -51,6 +51,24 @@ const removeIframeFromBody = () => {
     }, true); // Usa el tercer parámetro true para capturar el evento durante la fase de captura
   });
 
+
+
+const addSandboxToIframe = () => {
+    const iframeToAddSandbox = document.querySelector('body iframe');
+    if (iframeToAddSandbox) {
+        iframeToAddSandbox.setAttribute("sandbox", "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation");
+    }
+  };
+  
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('load', (event) => {
+      if (event.target.tagName.toLowerCase() === 'iframe') {
+        addSandboxToIframe();
+      }
+    }, true); 
+  });
+
     useEffect(() => {
         const getDetail = async () => {
             const response = await tmdbApi.detail(category, id, {params:{}});
@@ -227,7 +245,7 @@ const removeIframeFromBody = () => {
                                         frameborder="0" 
                                         allowfullscreen="" 
                                         webkitallowfullscreen="" 
-                                        mozallowfullscreen="">
+                                        mozallowfullscreen="" sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
                                     </iframe>
                                 </div>
                                 </div>
@@ -256,7 +274,15 @@ const removeIframeFromBody = () => {
                                             
                                             <div className='episode-info'>
                                                 <p>Episodio {episode.episode_number}: "{episode.name}"</p>
-                                                <p>Temporada {season.season_number}</p>
+                                                
+                                                {season.season_number === 0
+                                                ? 
+                                                <p className='temporada'>{season.name}</p>
+                                                : season.season_number !== 0
+                                                ? 
+                                                <p className='temporada'>Temporada {season.season_number}</p>
+                                                : ''
+                                                }
                                             </div>
                                             <div className='pelicula'>
                                                 <iframe className='movie-iframe'
@@ -264,7 +290,7 @@ const removeIframeFromBody = () => {
                                                     frameborder="0" 
                                                     allowfullscreen="" 
                                                     webkitallowfullscreen="" 
-                                                    mozallowfullscreen="">
+                                                    mozallowfullscreen="" sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
                                                 </iframe>
                                             </div>
                                             <div className='series-control-container'>

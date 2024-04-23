@@ -96,7 +96,7 @@ const HeroSlideItem = props => {
                     <h2 className="title">{item.title}</h2>
                     <div className="overview">{item.overview}</div>
                     <div className="btns">
-                        <Button onClick={() => hisrory.push(`/zetastreaming/movie/${item.id}/${urlTitle.toLowerCase()}`)}>
+                        <Button onClick={() => hisrory.push(`/movie/${item.id}/${urlTitle.toLowerCase()}`)}>
                             Ver Ahora
                         </Button>
                         <OutlineButton onClick={setModalActive}>

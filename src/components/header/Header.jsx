@@ -9,15 +9,15 @@ import logo from '../../assets/tmovie.png';
 const headerNav = [
     {
         display: 'Inicio',
-        path: '/zetastreaming'
+        path: '/'
     },
     {
         display: 'Peliculas',
-        path: '/zetastreaming/movie'
+        path: '/movie'
     },
     {
         display: 'Series',
-        path: '/zetastreaming/tv'
+        path: '/tv'
     }
 ];
 
@@ -47,7 +47,7 @@ const Header = () => {
             <div className="header__wrap container">
                 <div className="logo">
                     <img src={logo} alt="" />
-                    <Link to="/zetastreaming">ZETA STREAMING</Link>
+                    <Link to="/">ZETA STREAMING</Link>
                 </div>
                 <ul className="header__nav">
                     {

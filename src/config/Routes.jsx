@@ -10,19 +10,19 @@ const Routes = () => {
     return (
         <Switch>
             <Route
-                path='/zetastreaming/:category/search/:keyword'
+                path='/:category/search/:keyword'
                 component={Catalog}
             />
             <Route
-                path='/zetastreaming/:category/:id'
+                path='/:category/:id'
                 component={Detail}
             />
             <Route
-                path='/zetastreaming/:category'
+                path='/:category'
                 component={Catalog}
             />
             <Route
-                path='/zetastreaming'
+                path='/'
                 exact
                 component={Home}
             />

@@ -21,22 +21,22 @@ const Footer = () => {
                 <div className="footer__content__logo">
                     <div className="logo">
                         <img src={logo} alt="" />
-                        <Link to="/zetastreaming">ZETA STREAMING</Link>
+                        <Link to="/">ZETA STREAMING</Link>
                     </div>
                 </div>
                 <div className="footer__content__menus">
                     <div className="footer__content__menu">
-                        <Link to="/zetastreaming">Inicio</Link>
-                        <Link to="/zetastreaming/movie">Peliculas</Link>
-                        <Link to="/zetastreaming/tv">Series</Link>
+                        <Link to="/">Inicio</Link>
+                        <Link to="/peliculas">Peliculas</Link>
+                        <Link to="/series">Series</Link>
                     </div>
                     <div className="footer__content__menu">
-                        <Link to="/zetastreaming" onClick={twitter}>Sigueme en Twitter</Link>
-                        <Link to="/zetastreaming" onClick={github}>Sigueme en GitHub</Link>
+                        <Link onClick={twitter}>Sigueme en Twitter</Link>
+                        <Link onClick={github}>Sigueme en GitHub</Link>
                     </div>
                     <div className="footer__content__menu">
-                        <Link to="/zetastreaming">Tienes que ver</Link>
-                        <Link to="/zetastreaming">Lanzamientos Recientes</Link>
+                        <Link to="/">Tienes que ver</Link>
+                        <Link to="/">Lanzamientos Recientes</Link>
                     </div>
                 </div>
             </div>

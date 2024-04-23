@@ -17,7 +17,7 @@ const MovieCard = props => {
 
     const urlTitle = originalTitle.replace(/ /g, '-')
 
-    const link = `/zetastreaming/${category[props.category]}/${item.id}/${urlTitle.toLocaleLowerCase()}`;
+    const link = `/${category[props.category]}/${item.id}/${urlTitle.toLocaleLowerCase()}`;
 
 
 
