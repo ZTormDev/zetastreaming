@@ -48,12 +48,6 @@ function App() {
   });
 
 
-    setTimeout(() => {
-      
-      
-
-    }, 8500);
-    
     return (
           <BrowserRouter>
             <Route

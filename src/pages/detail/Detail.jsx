@@ -29,46 +29,6 @@ const Detail = () => {
     const [TitleCategory, setTitleCategory] = useState('');
     const [typeOfContent, setTypeOfContent] = useState('');
 
-
-    
-// Define una función para eliminar un iframe dentro del body
-const removeIframeFromBody = () => {
-    const iframeToRemove = document.querySelector('body > iframe');
-    if (iframeToRemove) {
-      iframeToRemove.parentNode.removeChild(iframeToRemove);
-    }
-  };
-  
-  // Agrega un listener para el evento load del documento
-  document.addEventListener('DOMContentLoaded', () => {
-    // Agrega un listener para el evento load de los iframes
-    document.addEventListener('load', (event) => {
-      // Verifica si el elemento cargado es un iframe
-      if (event.target.tagName.toLowerCase() === 'iframe') {
-        // Ejecuta la función para eliminar el iframe del body
-        removeIframeFromBody();
-      }
-    }, true); // Usa el tercer parámetro true para capturar el evento durante la fase de captura
-  });
-
-
-
-const addSandboxToIframe = () => {
-    const iframeToAddSandbox = document.querySelector('body iframe');
-    if (iframeToAddSandbox) {
-        iframeToAddSandbox.setAttribute("sandbox", "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation");
-    }
-  };
-  
-
-  document.addEventListener('DOMContentLoaded', () => {
-    document.addEventListener('load', (event) => {
-      if (event.target.tagName.toLowerCase() === 'iframe') {
-        addSandboxToIframe();
-      }
-    }, true); 
-  });
-
     useEffect(() => {
         const getDetail = async () => {
             const response = await tmdbApi.detail(category, id, {params:{}});
@@ -98,9 +58,7 @@ const addSandboxToIframe = () => {
         }
         getDetail();
     }, [category, id]);
-
-        
-
+    
 
 
     const [showSeasons, setShowSeasons] = useState(true);
@@ -114,6 +72,7 @@ const addSandboxToIframe = () => {
 
             setShowSeasons(false)
             setshowEpisodes(true)
+
             window.scrollTo(0,800);
 
         } else {
@@ -245,7 +204,7 @@ const addSandboxToIframe = () => {
                                         frameborder="0" 
                                         allowfullscreen="" 
                                         webkitallowfullscreen="" 
-                                        mozallowfullscreen="" sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
+                                        mozallowfullscreen="" sandbox='allow-forms allow-same-origin allow-scripts allow-top-navigation'>
                                     </iframe>
                                 </div>
                                 </div>
@@ -290,7 +249,7 @@ const addSandboxToIframe = () => {
                                                     frameborder="0" 
                                                     allowfullscreen="" 
                                                     webkitallowfullscreen="" 
-                                                    mozallowfullscreen="" sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation">
+                                                    mozallowfullscreen="" sandbox='allow-forms allow-same-origin allow-scripts allow-top-navigation'>
                                                 </iframe>
                                             </div>
                                             <div className='series-control-container'>
