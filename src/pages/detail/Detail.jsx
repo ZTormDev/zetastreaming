@@ -37,7 +37,7 @@ const Detail = () => {
 
             // Determinar la fuente del iframe
             const src = category === 'movie'
-                ? `https://es.oceanplay.me/embeds/${id}`
+                ? `https://vidsrc.xyz/embed/movie?tmdb=${id}&ds_lang=es`
                 : '';
 
             const title = category === 'movie'
@@ -90,7 +90,7 @@ const Detail = () => {
     const [seasonNumber, setSeasonNumber] = useState(1);
     const [episodeNumber, setEpisodeNumber] = useState(1);
 
-    let episodeUrl = `https://es.oceanplay.me/embeds/${id}/${seasonNumber}/${episodeNumber}`;
+    let episodeUrl = `https://vidsrc.xyz/embed/tv?tmdb=${id}&season=${seasonNumber}&episode=${episodeNumber}&ds_lang=es`;
 
     const nextEpisode = () => {
         setEpisodeNumber(episodeNumber + 1);
@@ -201,10 +201,10 @@ const Detail = () => {
                                 <div className="section mb-3 pelicula">
                                     <iframe className='movie-iframe'
                                         src={iframeSrc} title={category}
-                                        frameborder="0" 
-                                        allowfullscreen="" 
+                                        style={{border: 0}}
+                                        allowFullScreen="" 
                                         webkitallowfullscreen="" 
-                                        mozallowfullscreen="" sandbox='allow-forms allow-same-origin allow-scripts allow-top-navigation'>
+                                        mozallowfullscreen="">
                                     </iframe>
                                 </div>
                                 </div>
@@ -249,7 +249,7 @@ const Detail = () => {
                                                     frameborder="0" 
                                                     allowfullscreen="" 
                                                     webkitallowfullscreen="" 
-                                                    mozallowfullscreen="" sandbox='allow-forms allow-same-origin allow-scripts allow-top-navigation'>
+                                                    mozallowfullscreen="">
                                                 </iframe>
                                             </div>
                                             <div className='series-control-container'>
